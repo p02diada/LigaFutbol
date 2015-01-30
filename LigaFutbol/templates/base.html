@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
+        <title>Base HTML page</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>{% block Header %}Malt Auction{% endblock %}</h1>
+        </header>
+
+        <nav>
+            {% block NavigationTop %}
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="/distilleries/">Distilleries</a></li>
+                <li><a href="/brands/">Brands</a></li>
+                <li><a href="/bottles/list/">Bottles</a><li>
+            </ul>
+            {% endblock %}
+        </nav>
+
+        <div id="content-container">
+            <section id="left-navigation">
+                {% block NavigationLeft %}
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="/distilleries/">Distilleries</a></li>
+                     <li><a href="/brands/">Brands</a></li>
+                      <li><a href="/bottles/list/">Bottles</a><li>
+                  </ul>
+                {% endblock %}
+            </section>
+
+            <div id="content">
+            {% block Contents %}
+                <h2>Welcome to Malt Auction web</h2>
+            {% endblock %}
+            </div>
+
+            <aside>
+            {% block Aside %}
+                <h3>
+                    Context info
+                </h3>
+            {% endblock %}
+            </aside>
+        </div>
+
+        <footer>
+            {% block Footer %}
+                   &copy Nicolás García Pedrajas
+            {% endblock %}
+        </footer>
+
+  </body>
+
+  </html>

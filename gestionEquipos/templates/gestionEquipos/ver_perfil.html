@@ -1,0 +1,16 @@
+{% extends "app_myMicroBlogging/home.html"%}
+
+{% block titulo %}
+<h1 class="page-header">Perfil</h1>
+{% endblock%}
+
+
+{% block cuerpo %}
+
+
+Nick de usuario:{{usuario.username}}
+Nombre:{{usuario.first_name}}
+Apellidos:{{usuario.last_name}}
+
+
+{% endblock %}

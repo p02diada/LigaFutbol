@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+
+{% block Contents %}
+<p>Nombre: {{equipo.nombre}}</p>
+<p>Anyo fundacion: {{equipo.anyoCreacion}}</p>
+<p>Ciudad: {{equipo.ciudad}}</p>
+<p>Historia: {{equipo.historia}}</p>
+<p>Nombre del entrenador: {{equipo.nombreEntrenador}}</p>
+<h1>Jugadores</h1>
+
+
+	
+		
+		{% for jugador in equipo.jugador_set.all %}
+			<li>{{jugador.nombre}} <a href='/gestionEquipos/jugador/eliminar/{{jugadores.id}}/' alt="">eliminar</a></li>
+			
+		{%endfor%}
+		
+
+
+<p> La edad media de los jugadore es: {{edadMedia}}
+<p><a href='/gestionEquipos/editarEquipo/{{equipo.id}}/' alt="">editar</a></p>
+{% endblock %}

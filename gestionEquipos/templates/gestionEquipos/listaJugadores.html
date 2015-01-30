@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+
+{% block Contents %}
+	 {% if listaJugadores %}
+		
+		{% for jugador in listaJugadores %}
+			<li><a href='/gestionEquipos/jugador/{{jugador.id}}/' alt="">{{jugador.nombre}}</a> <a href='/gestionEquipos/jugador/eliminar/{{jugador.id}}/'>eliminar</a></li>
+		{%endfor%}
+		
+	{%else%}
+		<p> No hay jugadores en la base de datos</p>
+	{%endif%}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+{% block Contents %}
+	 {% if listaEquipos %}
+		
+		{% for equipos in listaEquipos %}
+			<li><a href='/gestionEquipos/equipos/{{equipos.id}}/'alt="">{{equipos.nombre}}</a> </li>
+		{%endfor%}
+		
+	{%else%}
+		<p> No hay equipos en la base de datos</p>
+	{%endif%}
+{% endblock %}
+	

@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{% block Contents %}
+
+<p>Nombre: {{jugador.nombre}}</p>
+<p>{{jugador.fechaNacimiento}}</p>
+<p>{{jugador.lugarNacimiento}}</p>
+<p>{{jugador.edad}}</p>
+<p>{{jugador.equipo}}</p>
+<p>{{jugador.posicion}}</p>
+<p>{{jugador.id}}</p>
+<p><a href='/gestionEquipos/editarJugador/{{jugador.id}}/' alt="">editar</a></p>
+{% endblock %}
